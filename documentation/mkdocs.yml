@@ -1,0 +1,9 @@
+site_name: My Docs
+
+nav:
+  - Home: index.md
+  - Setup: setup.md
+
+# Add material theme
+theme:
+  name: material
