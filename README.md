@@ -1,8 +1,8 @@
 # Create a webpage for your project
 
-Let's use (Mkdocs)[https://www.mkdocs.org/] as it is the easiest tool to use.
+Let's use [Mkdocs](https://www.mkdocs.org/) as it is the easiest tool to use.
 
-Setup:
+## Setup
 
 ```bash
 pip install mkdocs
@@ -22,14 +22,17 @@ cd documentation
 mkdocs serve
 ```
 
-The tool consists in two main things:
+Go to your browser and copy the following address: http://127.0.0.1:8000/
+
+The tool consists of two main parts:
 
 * Documents that represent pages and are written in Markdown (`documentation/docs` folder)
 * A configuration file to setup the whole webpage (`documentation/mkdocs.yml` file)
 
-Let's customize the webpage configuration:
 
 ## Themes
+
+Let's customize the webpage configuration:
 
 Check all the themes at: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
 
@@ -63,12 +66,36 @@ as a new file into `docs`.
 
 ## Create webpage
 
+This creates the html files required for your webpage:
+
 ```bash
 mkdocs build
 # Make sure you are in the root of the repository
-echo "documentation/site/" >> .gitignore
+echo "documentation/site/" >> $(git rev-parse --show-toplevel)/.gitignore
 ```
 
+To check how the wepbage will look like from your browser:
+
+```bash
+mkdocs serve
+```
+
+And then go to your browser and copy the following address: http://127.0.0.1:8000/
+
+## Deployment
+
+Let's deploy the webpage to GitHub pages. Make sure your repo is hosted in a GitHub repository before deploying the webpage.
+
+```bash
+cd documentation
+mkdocs gh-deploy
+```
+
+## Customization
+
+Check the documentation to know how to configure your site (github link, google analytics,...): https://www.mkdocs.org/user-guide/configuration/.
+
+More documentation to customize the template can be found here: https://www.mkdocs.org/user-guide/configuration/.
 
 ### Annex
 
