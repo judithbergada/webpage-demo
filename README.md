@@ -36,7 +36,7 @@ Let's customize the webpage configuration:
 
 Check all the themes at: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
 
-A nice one: Material (sponsored by Google): https://github.com/squidfunk/mkdocs-material. Intall it:
+A nice one: Material (sponsored by Google): https://github.com/squidfunk/mkdocs-material. Install it:
 
 ```bash
 pip install mkdocs-material
